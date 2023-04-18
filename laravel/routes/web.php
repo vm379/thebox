@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProjectCategoryController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,41 +19,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 // home page
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', [HomeController::class, 'show']);
 
 // about page
-Route::get('/about', function () {
-    return view('about');
-});
-
-// projects page
-Route::get('/projects', function () {
-    return view('projects');
-});
+Route::get('/{page}', [PageController::class, 'show']);
 
 // projects category
-Route::get('/projects/{category}', function () {
-    return view('projects');
-});
+Route::get('/projects/{category}', [ProjectCategoryController::class, 'show']);
 
 // project
-Route::get('/projects/{category}/{project}', function () {
-    return view('project');
-});
-
-// services
-Route::get('/services', function () {
-    return view('services');
-});
+Route::get('/projects/{category}/{project}', [ProjectController::class, 'show']);
 
 // service
-Route::get('/services/{service}', function () {
-    return view('service');
-});
-
-//contacts
-Route::get('/contacts', function () {
-    return view('contacts');
-});
+Route::get('/services/{service}', [ServiceController::class, 'show']);
