@@ -3,11 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
-use App\Models\Category;
-use App\Models\SubCategory;
 use App\Models\Page;
 use App\Models\Project;
+use App\Models\ProjectsCategory;
 use App\Models\Service;
 use Illuminate\Database\Seeder;
 
@@ -28,14 +26,26 @@ class DatabaseSeeder extends Seeder
         // page
         Page::create([
             'title' => 'TheBox Company | Home',
-            'content' => 'homepage text',
+            'content' => 'home page',
             'slug' => '/'
         ]);
 
         Page::create([
             'title' => 'TheBox Company | About Us',
-            'content' => 'about company text',
+            'content' => 'about us page',
             'slug' => 'about'
+        ]);
+
+        Page::create([
+            'title' => 'TheBox Company | Projects',
+            'content' => 'projects page',
+            'slug' => 'projects'
+        ]);
+
+        Page::create([
+            'title' => 'TheBox Company | Services',
+            'content' => 'services',
+            'slug' => 'services'
         ]);
 
         Page::create([
@@ -45,112 +55,49 @@ class DatabaseSeeder extends Seeder
         ]);
         // end page
 
-        // category
-        Category::create([
-            'title' => 'TheBox Company | Projects',
-            'content' => 'projects text',
-            'slug' => 'projects'
-        ]);
-
-        Category::create([
-            'title' => 'TheBox Company | Services',
-            'content' => 'services text',
-            'slug' => 'services'
-        ]);
-        // end category
-
-        // sub-category
-        SubCategory::create([
+        // projects category
+        ProjectsCategory::create([
             'title' => 'Residential',
             'content' => 'residential text',
-            'slug' => 'residential',
-            'category_id' => 1
+            'slug' => 'residential'
         ]);
 
-        SubCategory::create([
+        ProjectsCategory::create([
             'title' => 'Commercial',
             'content' => 'commercial text',
-            'slug' => 'commercial',
-            'category_id' => 1
+            'slug' => 'commercial'
         ]);
 
-        SubCategory::create([
+        ProjectsCategory::create([
             'title' => 'Industrial',
             'content' => 'industrial text',
-            'slug' => 'industrial',
-            'category_id' => 1
+            'slug' => 'industrial'
         ]);
 
-        SubCategory::create([
+        ProjectsCategory::create([
             'title' => 'Infrastructure',
             'content' => 'infrastructure text',
-            'slug' => 'infrastructure',
-            'category_id' => 1
+            'slug' => 'infrastructure'
         ]);
 
-        SubCategory::create([
+        ProjectsCategory::create([
             'title' => 'Agricultural',
             'content' => 'agricultural text',
-            'slug' => 'agricultural',
-            'category_id' => 1
+            'slug' => 'agricultural'
         ]);
 
-        SubCategory::create([
+        ProjectsCategory::create([
             'title' => 'Institutional',
             'content' => 'institutional text',
-            'slug' => 'institutional',
-            'category_id' => 1
+            'slug' => 'institutional'
         ]);
 
-        SubCategory::create([
+        ProjectsCategory::create([
             'title' => 'Residential',
             'content' => 'residential text',
-            'slug' => 'residential',
-            'category_id' => 1
+            'slug' => 'residential'
         ]);
-
-        SubCategory::create([
-            'title' => 'Construction',
-            'content' => 'construction text',
-            'slug' => 'construction',
-            'category_id' => 2
-        ]);
-
-        SubCategory::create([
-            'title' => 'Renovation',
-            'content' => 'renovation text',
-            'slug' => 'renovation',
-            'category_id' => 2
-        ]);
-
-        SubCategory::create([
-            'title' => 'Consultation',
-            'content' => 'consultation text',
-            'slug' => 'consultation',
-            'category_id' => 2
-        ]);
-
-        SubCategory::create([
-            'title' => 'Repair Services',
-            'content' => 'repair services text',
-            'slug' => 'repair-services',
-            'category_id' => 2
-        ]);
-
-        SubCategory::create([
-            'title' => 'Architecture',
-            'content' => 'architecture text',
-            'slug' => 'architecture',
-            'category_id' => 2
-        ]);
-
-        SubCategory::create([
-            'title' => 'Electric',
-            'content' => 'electric text',
-            'slug' => 'electric',
-            'category_id' => 2
-        ]);
-        // end sub-category
+        // end projects category
 
         // project
         Project::create([
@@ -158,7 +105,7 @@ class DatabaseSeeder extends Seeder
             'address' => '2715 Ash Dr. San Jose, South Dakota',
             'content' => 'project 1 content',
             'slug' => 'wildstone-infra-hotel',
-            'sub-category_id' => 1
+            'category_id' => 1
         ]);
 
         Project::create([
@@ -166,7 +113,7 @@ class DatabaseSeeder extends Seeder
             'address' => '2972 Westheimer Rd. Santa Ana, Illinois',
             'content' => 'project 2 content',
             'slug' => 'wish-stone-building',
-            'sub-category_id' => 1
+            'category_id' => 1
         ]);
 
         Project::create([
@@ -174,7 +121,7 @@ class DatabaseSeeder extends Seeder
             'address' => '3517 W. Gray St. Utica, Pennsylvania',
             'content' => 'project 3 content',
             'slug' => 'mr-parkinstons-house',
-            'sub-category_id' => 2
+            'category_id' => 2
         ]);
 
         Project::create([
@@ -182,51 +129,45 @@ class DatabaseSeeder extends Seeder
             'address' => '2464 Royal Ln. Mesa, New Jersey ',
             'content' => 'project 4 content',
             'slug' => 'oregano-height',
-            'sub-category_id' => 3
+            'category_id' => 3
         ]);
         // end project
 
         // service
         Service::create([
             'title' => 'Construction',
-            'content' => 'service 1 content',
-            'slug' => 'construction',
-            'sub-category_id' => 1
+            'content' => 'service construction',
+            'slug' => 'construction'
         ]);
 
         Service::create([
             'title' => 'Renovation',
-            'content' => 'service 2 content',
-            'slug' => 'renovation',
-            'sub-category_id' => 2
+            'content' => 'service renovation',
+            'slug' => 'renovation'
         ]);
 
         Service::create([
             'title' => 'Consultation',
-            'content' => 'service 3 content',
-            'slug' => 'consultation',
-            'sub-category_id' => 3
+            'content' => 'service consultation',
+            'slug' => 'consultation'
         ]);
 
         Service::create([
             'title' => 'Repair Services',
-            'content' => 'service 4 content',
-            'slug' => 'repair-services',
-            'sub-category_id' => 4
+            'content' => 'service repair-services',
+            'slug' => 'repair-services'
         ]);
 
         Service::create([
             'title' => 'Architecture',
-            'content' => 'service 5 content',
-            'slug' => 'architecture',
-            'sub-category_id' => 5
+            'content' => 'service architecture',
+            'slug' => 'architecture'
         ]);
 
         Service::create([
             'title' => 'Electric',
-            'content' => 'service 6 content',
-            'slug' => 'electric',
-            'sub-category_id' => 6
+            'content' => 'service electric',
+            'slug' => 'electric'
         ]);
         // end service
     }
