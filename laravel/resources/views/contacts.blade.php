@@ -1,1 +1,3 @@
-contacts
+{{ $title }}
+<div></div>
+{{ $content }}

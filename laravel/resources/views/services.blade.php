@@ -1,1 +1,3 @@
-services
+{{ $title }}
+<div></div>
+{{ $content }}

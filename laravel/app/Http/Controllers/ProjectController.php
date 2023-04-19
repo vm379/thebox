@@ -2,17 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
     public function index()
     {
-        return view('projects');
+        $page = Project::getBySlug('projects');
+        $projects = Project::all();
+
+        return view('projects', [
+            "title" => $page->title,
+            "projects" => $projects
+        ]);
     }
 
     public function show(string $category, string $project)
     {
-        return view('project');
+        $page = Project::getProjectBySlug($category, $project);
+
+        return view('project', [
+            "title" => $page->projectTitle,
+            "address" => $page->projectAddress,
+            "content" => $page->projectContent
+        ]);
     }
 }

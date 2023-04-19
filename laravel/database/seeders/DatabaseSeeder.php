@@ -3,11 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Page;
-use App\Models\Project;
-use App\Models\ProjectsCategory;
-use App\Models\Service;
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,76 +21,76 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // page
-        Page::create([
+        // pages
+        DB::table('pages')->insert([
             'title' => 'TheBox Company | Home',
             'content' => 'home page',
             'slug' => '/'
         ]);
 
-        Page::create([
+        DB::table('pages')->insert([
             'title' => 'TheBox Company | About Us',
             'content' => 'about us page',
             'slug' => 'about'
         ]);
 
-        Page::create([
+        DB::table('pages')->insert([
             'title' => 'TheBox Company | Projects',
             'content' => 'projects page',
             'slug' => 'projects'
         ]);
 
-        Page::create([
+        DB::table('pages')->insert([
             'title' => 'TheBox Company | Services',
             'content' => 'services',
             'slug' => 'services'
         ]);
 
-        Page::create([
+        DB::table('pages')->insert([
             'title' => 'TheBox Company | Contacts',
             'content' => 'contacts text',
             'slug' => 'contacts'
         ]);
-        // end page
+        // end pages
 
         // projects category
-        ProjectsCategory::create([
+        DB::table('projects_categories')->insert([
             'title' => 'Residential',
             'content' => 'residential text',
             'slug' => 'residential'
         ]);
 
-        ProjectsCategory::create([
+        DB::table('projects_categories')->insert([
             'title' => 'Commercial',
             'content' => 'commercial text',
             'slug' => 'commercial'
         ]);
 
-        ProjectsCategory::create([
+        DB::table('projects_categories')->insert([
             'title' => 'Industrial',
             'content' => 'industrial text',
             'slug' => 'industrial'
         ]);
 
-        ProjectsCategory::create([
+        DB::table('projects_categories')->insert([
             'title' => 'Infrastructure',
             'content' => 'infrastructure text',
             'slug' => 'infrastructure'
         ]);
 
-        ProjectsCategory::create([
+        DB::table('projects_categories')->insert([
             'title' => 'Agricultural',
             'content' => 'agricultural text',
             'slug' => 'agricultural'
         ]);
 
-        ProjectsCategory::create([
+        DB::table('projects_categories')->insert([
             'title' => 'Institutional',
             'content' => 'institutional text',
             'slug' => 'institutional'
         ]);
 
-        ProjectsCategory::create([
+        DB::table('projects_categories')->insert([
             'title' => 'Residential',
             'content' => 'residential text',
             'slug' => 'residential'
@@ -100,33 +98,37 @@ class DatabaseSeeder extends Seeder
         // end projects category
 
         // project
-        Project::create([
+        DB::table('projects')->insert([
             'title' => 'Wildstone Infra Hotel',
             'address' => '2715 Ash Dr. San Jose, South Dakota',
+            'image' => "1.jpg",
             'content' => 'project 1 content',
             'slug' => 'wildstone-infra-hotel',
             'category_id' => 1
         ]);
 
-        Project::create([
+        DB::table('projects')->insert([
             'title' => 'Wish Stone Building',
             'address' => '2972 Westheimer Rd. Santa Ana, Illinois',
+            'image' => "2.jpg",
             'content' => 'project 2 content',
             'slug' => 'wish-stone-building',
             'category_id' => 1
         ]);
 
-        Project::create([
+        DB::table('projects')->insert([
             'title' => 'Mr. Parkinston\'s House',
             'address' => '3517 W. Gray St. Utica, Pennsylvania',
+            'image' => "3.jpg",
             'content' => 'project 3 content',
             'slug' => 'mr-parkinstons-house',
             'category_id' => 2
         ]);
 
-        Project::create([
+        DB::table('projects')->insert([
             'title' => 'Oregano Height',
             'address' => '2464 Royal Ln. Mesa, New Jersey ',
+            'image' => "4.jpg",
             'content' => 'project 4 content',
             'slug' => 'oregano-height',
             'category_id' => 3
@@ -134,41 +136,42 @@ class DatabaseSeeder extends Seeder
         // end project
 
         // service
-        Service::create([
+        DB::table('services')->insert([
             'title' => 'Construction',
             'content' => 'service construction',
             'slug' => 'construction'
         ]);
 
-        Service::create([
+        DB::table('services')->insert([
             'title' => 'Renovation',
             'content' => 'service renovation',
             'slug' => 'renovation'
         ]);
 
-        Service::create([
+        DB::table('services')->insert([
             'title' => 'Consultation',
             'content' => 'service consultation',
             'slug' => 'consultation'
         ]);
 
-        Service::create([
+        DB::table('services')->insert([
             'title' => 'Repair Services',
             'content' => 'service repair-services',
             'slug' => 'repair-services'
         ]);
 
-        Service::create([
+        DB::table('services')->insert([
             'title' => 'Architecture',
             'content' => 'service architecture',
             'slug' => 'architecture'
         ]);
 
-        Service::create([
+        DB::table('services')->insert([
             'title' => 'Electric',
             'content' => 'service electric',
             'slug' => 'electric'
         ]);
         // end service
+
     }
 }

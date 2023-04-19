@@ -1,1 +1,3 @@
-about
+{{ $title }}
+<div></div>
+{{ $content }}
