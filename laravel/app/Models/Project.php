@@ -11,6 +11,22 @@ class Project extends Model
     use HasFactory;
     protected $table = 'projects';
 
+    public static function getAll()
+    {
+        $projects = DB::table('projects as p')
+            ->select(
+                'p.image',
+                'p.title as projectTitle',
+                'p.address as projectAddress',
+                'p.slug as projectSlug',
+                'pc.slug as projectCategorySlug'
+            )
+            ->join('projects_categories as pc', 'p.category_id', '=', 'pc.id')
+            ->get();
+
+        return $projects;
+    }
+
     public static function getBySlug(string $slug)
     {
         $page = DB::table('pages')

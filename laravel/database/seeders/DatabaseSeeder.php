@@ -101,7 +101,7 @@ class DatabaseSeeder extends Seeder
         DB::table('projects')->insert([
             'title' => 'Wildstone Infra Hotel',
             'address' => '2715 Ash Dr. San Jose, South Dakota',
-            'image' => "1.jpg",
+            'image' => "project-card-1.png",
             'content' => 'project 1 content',
             'slug' => 'wildstone-infra-hotel',
             'category_id' => 1
@@ -110,7 +110,7 @@ class DatabaseSeeder extends Seeder
         DB::table('projects')->insert([
             'title' => 'Wish Stone Building',
             'address' => '2972 Westheimer Rd. Santa Ana, Illinois',
-            'image' => "2.jpg",
+            'image' => "project-card-2.png",
             'content' => 'project 2 content',
             'slug' => 'wish-stone-building',
             'category_id' => 1
@@ -119,7 +119,7 @@ class DatabaseSeeder extends Seeder
         DB::table('projects')->insert([
             'title' => 'Mr. Parkinston\'s House',
             'address' => '3517 W. Gray St. Utica, Pennsylvania',
-            'image' => "3.jpg",
+            'image' => "project-card-3.png",
             'content' => 'project 3 content',
             'slug' => 'mr-parkinstons-house',
             'category_id' => 2
@@ -128,7 +128,7 @@ class DatabaseSeeder extends Seeder
         DB::table('projects')->insert([
             'title' => 'Oregano Height',
             'address' => '2464 Royal Ln. Mesa, New Jersey ',
-            'image' => "4.jpg",
+            'image' => "project-card-4.png",
             'content' => 'project 4 content',
             'slug' => 'oregano-height',
             'category_id' => 3

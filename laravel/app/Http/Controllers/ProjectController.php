@@ -10,7 +10,7 @@ class ProjectController extends Controller
     public function index()
     {
         $page = Project::getBySlug('projects');
-        $projects = Project::all();
+        $projects = Project::getAll();
 
         return view('projects', [
             "title" => $page->title,
