@@ -138,20 +138,20 @@
                                         <div class="block">
                                             <ul class="footer-social">
                                                 <li class="item">
-                                                    <a href="" class="link">
-                                                        <img src="./img/footer/i/footer-social/fb.png" alt="fb" class="i">
+                                                    <a href="/" class="link">
+                                                        <img src="{{asset('/img/footer/i/footer-social/fb.png')}}" alt="fb" class="i">
                                                     </a>
                                                 </li>
 
                                                 <li class="item">
-                                                    <a href="" class="link">
-                                                        <img src="./img/footer/i/footer-social/in.png" alt="in" class="i">
+                                                    <a href="/" class="link">
+                                                        <img src="{{asset('/img/footer/i/footer-social/in.png')}}" alt="in" class="i">
                                                     </a>
                                                 </li>
 
                                                 <li class="item">
-                                                    <a href="" class="link">
-                                                        <img src="./img/footer/i/footer-social/tw.png" alt="tw" class="i">
+                                                    <a href="/" class="link">
+                                                        <img src="{{asset('/img/footer/i/footer-social/tw.png')}}" alt="tw" class="i">
                                                     </a>
                                                 </li>
                                             </ul>

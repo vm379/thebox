@@ -100,11 +100,31 @@
                             <div class="select-options">
                                 <ul class="options-list">
                                     <li class="option">
-                                        <a href="./commercial" class="link">Commercial</a>
+                                        <a href="/projects" class="link">All</a>
                                     </li>
 
                                     <li class="option">
-                                        <a href="./residential" class="link">Residential</a>
+                                        <a href="/projects/residential" class="link">Residential</a>
+                                    </li>
+
+                                    <li class="option">
+                                        <a href="/projects/commercial" class="link">Commercial</a>
+                                    </li>
+
+                                    <li class="option">
+                                        <a href="/projects/residential" class="link">Industrial</a>
+                                    </li>
+
+                                    <li class="option">
+                                        <a href="/projects/residential" class="link">Infrastructure</a>
+                                    </li>
+
+                                    <li class="option">
+                                        <a href="/projects/residential" class="link">Agricultural</a>
+                                    </li>
+
+                                    <li class="option">
+                                        <a href="/projects/residential" class="link">Institutional</a>
                                     </li>
                                 </ul>
                             </div>

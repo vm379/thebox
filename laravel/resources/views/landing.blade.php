@@ -444,8 +444,12 @@
                         <div class="options">
                             <div class="select-options">
                                 <ul class="options-list">
-                                    <li class="option">Commercial</li>
                                     <li class="option">Residential</li>
+                                    <li class="option">Commercial</li>
+                                    <li class="option">Industrial</li>
+                                    <li class="option">Infrastructure</li>
+                                    <li class="option">Agricultural</li>
+                                    <li class="option">Institutional</li>
                                 </ul>
                             </div>
                         </div>
